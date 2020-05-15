@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<html>
+    <head>
+        <title>Feeling Sentimental</title>
+        <link rel="stylesheet" type="text/css" href="{% static "/style.css" %}" />
+    </head>
+    <body>
+        <body style="text-align:center;">
+        <div id="header">
+            <h1>&#127926; Song Recommendation &#127925; </h1>
+        </div>
+        <div class="element">
+            <form method="get">
+              <table class="form">
+              <table align="center">
+                {{ form }}
+              </table>
+              <input type="submit" value="Submit"/>
+            </form>
+        </div>
+
+        <div class="element">
+            {% if result != None %}
+            <div class="result">
+                <table class="result">
+                    {{ result }}
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </body>
+</html>
